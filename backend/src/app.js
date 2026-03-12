@@ -1,5 +1,6 @@
 import express from 'express';
 import userRouter from './routes/user.route.js';
+import postRouter from './routes/post.route.js';
 import morgan from 'morgan';
 
 const app = express();
@@ -14,5 +15,6 @@ app.get("/", (req, res) => {
 });
 
 app.use("/api/v1/users", userRouter);
+app.use("/api/v1/posts", postRouter);
 
 export default app;
